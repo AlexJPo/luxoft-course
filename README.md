@@ -2,5 +2,3 @@
 
 ### Учащийся
 Alexey Potehin (Алексей Потехин)
-
-dropletofrain@mail.ru
