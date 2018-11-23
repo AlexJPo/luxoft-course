@@ -32,18 +32,10 @@
     </dependencyManagement>
 
     <modules>
-        <module>Common</module>
         <module>AccountService</module>
-        <module>AuthService</module>
         <module>CardService</module>
         <module>ClientService</module>
-        <module>ConfigServer</module>
-        <module>Dashboard</module>
         <module>Eureka</module>
         <module>ProcessingService</module>
-        <module>TurbineServer</module>
-        <module>ZipkinServer</module>
-        <module>Zuul</module>
-        <module>HistoryService</module>
     </modules>
 </project>
