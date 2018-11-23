@@ -22,11 +22,17 @@ public class ProcessingRest {
 
     @RequestMapping(path = "/issue/{accountId}")
     public String issue(@PathVariable Integer accountId) {
+        final String card = cardServiceClient.create();
+        if (card == null) {
+            return "CARD_SERVICE_NOT_AVAILABLE";
+        }
+
         ProcessingEntity entity = new ProcessingEntity();
         entity.setAccountId(accountId);
-        entity.setCard(cardServiceClient.create());
+        entity.setCard(card);
         processingRepository.save(entity);
-        return entity.getCard();
+
+        return card;
     }
 
     @RequestMapping(path = "/checkout/{card}")
